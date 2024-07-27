@@ -20,7 +20,7 @@ print("=" * 20)
 print(obj3)
 print(obj4)
 
-# CORRECT
+# CORRECT COPY
 original_dict = {"a": 1, "b": [2, 3], "c": {"d": 4}}
 shallow_copy = original_dict.copy() 
 print(shallow_copy)
