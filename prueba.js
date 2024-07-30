@@ -7,3 +7,5 @@ console.log(number);
 // and ---> &&
 // or ---> ||
 // not ---> !
+
+"#" * 5;

@@ -1,3 +1,5 @@
+
+import math
 #Suma
 a = 10
 b = 17
@@ -34,3 +36,10 @@ print( "residuo",i % j)
 k = 2
 l = 4
 print( "potencia", k / l)
+
+print("=" * 30)
+#Using math functions
+print(math.ceil(1.5)) #arriba
+print(math.floor(1.5)) #abajo
+print(math.isnan(12))
+print(math.sqrt(64))
