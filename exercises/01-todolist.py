@@ -43,7 +43,7 @@ def delete_task():
             todos.remove(todo) 
             print("tarea eliminada con éxito")
             break
-
+            
 
 def exit():
     print("-"*37)
