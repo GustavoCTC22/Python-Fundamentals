@@ -31,13 +31,25 @@ def create_task():
             break
 
 def update_task():
-    pass
+    show_tasks()
+    while True:
+        task_id = input("Select todo by ID: ")
+        if any(todo["id"] == task_id for todo in todos):
+            new_name = input("Introduce new task name: ")
+            for todo in todos:
+                if todo["id"] == task_id:
+                    todo["nombre"] = new_name
+                    break
+            print(new_name)
+            break
+        print("ID provided doesnt exists")
+
 
 def delete_task():
     show_tasks()
-    print(todos)
     task_id = input("Select todo by ID: ")
-    #  todos = list(filter(lambda todo: todo["id"] != task_id, todos))
+    # todos_updated = list(filter(lambda todo: todo["id"] != task_id, todos))
+    # return todos_updated
     for todo in todos:
         if todo["id"] == task_id:
             todos.remove(todo) 
@@ -66,10 +78,10 @@ def menu():
             case "SHOW":
                 show_tasks()
             case "DELETE":
+                # global todos
                 delete_task()
             case "UPDATE":
-                pass
-                # return update_task()
+                update_task()
             case "EXIT":
                 return exit()
 
